@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Popup styling */
+        .popup {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            padding: 20px;
+            background-color: white;
+            color: black; /* Text color set to black */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            z-index: 1000;
+            display: none; /* Hidden by default */
+        }
+
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none; /* Hidden by default */
+        }
+
+        .popup button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Calen's Photography Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="gallery">
+            <h2>Photo Gallery</h2>
+            <br />
+            <div class="photo-grid">
+                <!-- Update the src attribute to point to the photos folder -->
+                <img src="photos/photo1.jpg" alt="Photo 1">
+                <img src="photos/photo2.jpg" alt="Photo 2">
+                <img src="photos/photo3.jpg" alt="Photo 3">
+                <img src="photos/photo4.jpg" alt="Photo 4">
+                <img src="photos/photo5.jpg" alt="Photo 5">
+                <img src="photos/photo6.jpg" alt="Photo 6">
+                <img src="photos/photo7.jpg" alt="Photo 7">
+                <img src="photos/photo8.jpg" alt="Photo 8">
+                <img src="photos/photo9.jpg" alt="Photo 9">
+                <img src="photos/photo10.jpg" alt="Photo 10">
+                <img src="photos/photo11.jpg" alt="Photo 11">
+                <img src="photos/photo12.jpg" alt="Photo 12">
+                <img src="photos/photo13.jpg" alt="Photo 13">
+                <img src="photos/photo14.jpg" alt="Photo 14">
+                <img src="photos/photo15.jpg" alt="Photo 15">
+                <img src="photos/photo16.jpg" alt="Photo 16">
+                <img src="photos/photo17.jpg" alt="Photo 17">
+                <img src="photos/photo18.jpg" alt="Photo 18">
+                <img src="photos/photo19.jpg" alt="Photo 19">
+                <img src="photos/photo20.jpg" alt="Photo 20">
+                <img src="photos/photo21.jpg" alt="Photo 21">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Calen Buckhanon. All rights reserved.</p>
+        <li><a href="cookies.html">Privacy Policy</a></li>
+    </footer>
+
+    <!-- Popup Overlay -->
+    <div class="popup-overlay" id="popup-overlay"></div>
+
+    <!-- Popup Content -->
+    <div class="popup" id="popup">
+        <p>This site has a no tracking policy.</p>
+        <button onclick="acknowledgePopup()">Acknowledge</button>
+        <button onclick="window.location.href='cookies.html'">Privacy Policy</button>
+    </div>
+
+    <script>
+        // Check if the popup has been acknowledged before
+        window.onload = function() {
+            if (!localStorage.getItem('popupAcknowledged')) {
+                document.getElementById('popup').style.display = 'block';
+                document.getElementById('popup-overlay').style.display = 'block';
+            }
+        };
+
+        // Function to hide the popup and set acknowledgment in local storage
+        function acknowledgePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('popup-overlay').style.display = 'none';
+            localStorage.setItem('popupAcknowledged', 'true');
+        }
+    </script>
+</body>
+</html>
