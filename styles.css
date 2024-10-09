@@ -94,3 +94,7 @@ button, input[type="submit"] {
     margin-top: 10px;
 }
 
+.cookies {
+    max-width: 800px;
+    margin: 0 auto;
+}
