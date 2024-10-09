@@ -82,17 +82,6 @@
         <li><a href="cookies.html">Privacy Policy</a></li>
     </footer>
 
-    <!-- Popup Overlay -->
-    <div class="popup-overlay" id="popup-overlay"></div>
-
-    <!-- Popup Content -->
-    <div class="popup" id="popup">
-        <p>Snailairy.com has a 'No Tracking' Privacy policy. Please look at the 'Privacy Policy' page for more information.</p>
-        <p>Important!: Check out our <a href="privacy.html" style="color: black;">Privacy Policy</a> It's important ;)</p>
-        <p>Check out my <a href="faq.html" style="color: black;">FAQ</a></p>
-        <button onclick="acknowledgePopup()">Acknowledge</button>
-        <button onclick="window.location.href='cookies.html'">Privacy Policy</button>
-    </div>
     <script>
         // Check if the popup has been acknowledged before
         window.onload = function() {
@@ -109,5 +98,15 @@
             localStorage.setItem('popupAcknowledged', 'true');
         }
     </script>
+
+    <!-- Popup Overlay -->
+    <div class="popup-overlay" id="popup-overlay"></div>
+
+    <!-- Popup Content -->
+    <div class="popup" id="popup">
+        <p>Snailairy.com has a 'No Tracking' Privacy policy. Please look at the 'Privacy Policy' page for more information.</p>
+        <button onclick="acknowledgePopup()">Acknowledge</button>
+        <button onclick="window.location.href='cookies.html'">Privacy Policy</button>
+    </div>
 </body>
 </html>
