@@ -21,7 +21,6 @@
             z-index: 1000;
             display: none; /* Hidden by default */
         }
-
         .popup-overlay {
             position: fixed;
             top: 0;
@@ -31,10 +30,6 @@
             background: rgba(0, 0, 0, 0.5);
             z-index: 999;
             display: none; /* Hidden by default */
-        }
-
-        .popup button {
-            margin: 5px;
         }
     </style>
 </head>
@@ -92,11 +87,12 @@
 
     <!-- Popup Content -->
     <div class="popup" id="popup">
-        <p>This site has a no tracking policy.</p>
+        <p>Snailairy.com has a 'No Tracking' Privacy policy. Please look at the 'Privacy Policy' page for more information.</p>
+        <p>Important!: Check out our <a href="privacy.html" style="color: black;">Privacy Policy</a> It's important ;)</p>
+        <p>Check out my <a href="faq.html" style="color: black;">FAQ</a></p>
         <button onclick="acknowledgePopup()">Acknowledge</button>
         <button onclick="window.location.href='cookies.html'">Privacy Policy</button>
     </div>
-
     <script>
         // Check if the popup has been acknowledged before
         window.onload = function() {
